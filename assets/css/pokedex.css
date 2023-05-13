@@ -1,3 +1,9 @@
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
 .pokemons {
     display: grid;
     grid-template-columns: 1fr;
@@ -84,11 +90,16 @@
     margin: .5rem;
     padding: 1rem;
     border-radius: 1rem;
+    transition: 0.3s;
+}
+
+.pokemon:hover {
+    transform: scale(1.1);
 }
 
 .pokemon .number {
     color: #000;
-    opacity: .3;
+    opacity: .5;
     text-align: right;
     font-size: .625rem;
 }
@@ -97,6 +108,7 @@
     text-transform: capitalize;
     color: #fff;
     margin-bottom: .25rem;
+    text-align: left;
 }
 
 .pokemon .detail {
@@ -123,7 +135,7 @@
 }
 
 .pokemon .detail img {
-    max-width: 100%;
+    max-width: 90px;
     height: 70px;
 }
 
@@ -149,9 +161,169 @@
     height: 40px;
 }
 
+.pagination button:hover {
+    background-color: #404ba0;  
+    cursor: pointer;
+}
+
+.pokemonCard {
+    background: none;
+    border: none;
+    cursor: pointer;
+}
+
+#modal {
+    display: none;
+    position: fixed;
+    z-index: 1; 
+    left: 0;
+    top: 0;
+    width: 100%; 
+    height: 100%;
+
+    background-color: rgba(104, 104, 104, 0.5);
+
+    align-items: center;
+}
+
+.pokemonsCards {
+    margin: auto;
+    padding-top: 1rem;
+
+    height: 100vh;
+    width: 20rem;
+}
+
+#modaCard {
+    height: 35rem;
+}
+
+#modalCard:hover {
+    transform: scale(1);
+}
+
+.pokemonsCards .closeBtn {
+    width: 1.5rem;
+    height: 1.5rem;
+
+    padding: 0.25rem 0.5rem;
+    margin: 0.25rem 0;
+
+    font-size: .8rem;
+    font-weight: bolder;
+
+    color: rgba(0, 0, 0, .7);
+    background-color: rgba(255, 255, 255, .5);
+
+    border: none;
+    border-radius: 0.4rem;
+}
+
+.pokemonsCards .closeBtn:hover {
+    cursor: pointer;
+}
+
+.pokemonsCards .header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.pokemonsCards .header .nameModal {
+    color: white;
+    text-transform: capitalize;
+
+    font-size: 2rem;
+}
+
+.pokemonsCards .header .numberModal {
+    font-size: 1rem;
+    color: rgba(0, 0, 0, .5);
+}
+
+.pokemonsCards .modalDetail {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: space-between;
+}
+
+.pokemonsCards .modalDetail .typesModal {
+    padding: 0;
+    margin: 0;
+    list-style: none;
+}
+
+.pokemonsCards .modalDetail .typesModal .typeModal {
+    color: #fff;
+    padding: 0.5rem 0.8rem;
+    margin: 0.25rem 0;
+    font-size: .9rem;
+    border-radius: 1rem;
+    filter: brightness(1.2);
+    text-align: center;
+}
+
+.pokemonsCards .modalDetail img {
+    max-width: 11rem;
+    height: 12rem;
+}
+
+.pokemonsCards .infoPokemon {
+    background-color: rgba(0 , 0, 0, 0.2);
+    border-radius: 1rem;
+
+    color: white;
+    text-align: center;
+    padding: 1rem;
+}
+
+.infoPokemon h3 {
+    margin-bottom: 1rem;
+}
+
+.pokemonsCards .phisDetail {
+    display: flex;
+    flex-direction: column;
+    
+    font-size: 1rem;
+}
+
+.pokemonsCards .phisDetail p {
+    margin-bottom: 0.2rem;
+}
+
+.pokemonsCards .baseStats {
+    margin-top: 0.5rem;
+    border-top: solid white 1px;
+    padding-top: 0.7rem;
+}
+
+.pokemonsCards .baseStats .baseStatsDetail {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    grid-gap: 1rem;
+}
+
+.pokemonsCards .baseStats .baseStatsDetail p{
+    margin: 0.2rem 0;
+    text-transform: capitalize;
+}
+
+.pokemonsCards .baseStats .baseStatsDetail .statName p {
+    text-align: right;
+}
+
+.pokemonsCards .baseStats .baseStatsDetail .statsNumber p {
+    text-align: left;
+}
+
 @media screen and (min-width: 380px) {
     .pokemons {
         grid-template-columns: 1fr 1fr;
+    }
+    .pokemonsCards {
+        padding-top: 3rem;
     }
 }
 
