@@ -54,7 +54,7 @@ const displayCard = (pokemon) => {
             <li id="modalCard" class="pokemon ${pokemon.type}">
                 <button class="closeBtn" onClick="closeCard()">X</button>
                 
-                <div class="header">
+                <div class="headerModal">
                     <span class="nameModal">${pokemon.name}</span>
                     <span class="numberModal">#${pokemon.id}</span>
                 </div>
