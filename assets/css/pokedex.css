@@ -223,20 +223,20 @@
     cursor: pointer;
 }
 
-.pokemonsCards .header {
+.pokemonsCards .headerModal {
     display: flex;
     justify-content: space-between;
     align-items: center;
 }
 
-.pokemonsCards .header .nameModal {
+.pokemonsCards .headerModal .nameModal {
     color: white;
     text-transform: capitalize;
 
     font-size: 2rem;
 }
 
-.pokemonsCards .header .numberModal {
+.pokemonsCards .headerModal .numberModal {
     font-size: 1rem;
     color: rgba(0, 0, 0, .5);
 }
