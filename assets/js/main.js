@@ -116,7 +116,7 @@ function closeCard () {
 }
 
 function loadPokemonItens(offset, limit) {
-    pokeApi.getPokemons(offset, limit).then((pokemons = []) => {
+    pokeApi.getPokemons(offset, limit).then((pokemons = []) => { pokemonList.push(pokemons)
         const newHtml = pokemons.map(convertPokemonToLi).join('')
         pokemonList.innerHTML += newHtml
     })
